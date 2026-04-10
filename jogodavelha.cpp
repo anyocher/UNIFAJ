@@ -50,4 +50,15 @@ int main() {
         tabuleiro[(pos-1)/3][(pos-1)%3] = jogador;
 
         // Checar vitória
-        if (venceu(jog
+        if (venceu(jogador)) {
+            exibir();
+            cout << "Jogador " << jogador << " venceu!\n";
+            return 0;
+        }
+    }
+
+    // 9 rodadas sem vencedor = empate
+    exibir();
+    cout << "Empate!\n";
+    return 0;
+}
